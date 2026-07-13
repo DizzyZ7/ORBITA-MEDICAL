@@ -1,0 +1,25 @@
+/* Responsive hardening — 2026-07 */
+html, body { width: 100%; max-width: 100%; overflow-x: clip; }
+body, main, section, footer { min-width: 0; }
+.hero, .journey, .trust, .footer { overflow-x: clip; }
+.section-shell { max-width: calc(100% - 32px); }
+.hero-title { width: min(100%, 1720px); padding-inline: 2vw; font-size: clamp(72px, 8.7vw, 156px); line-height: .78; }
+.hero-title__line:first-child { transform: translateX(-2%); }
+.hero-title__line:last-child { transform: translateX(2%); }
+.trust-marquee { max-width: 100%; overflow: hidden; }
+.navigator-stage, .specialist-stage, .contact { min-width: 0; }
+.navigator-stage > *, .specialist-stage > *, .contact > * { min-width: 0; }
+@media (max-width: 899px) {
+  .hero { overflow: hidden; }
+  .hero-title { width: 100%; padding: 0; font-size: clamp(54px, 15.2vw, 82px); line-height: .86; transform: none !important; }
+  .hero-title__line:first-child, .hero-title__line:last-child { transform: none; }
+  .hero-title__line--soft { padding-left: 8%; }
+  .hero-visual { max-width: 100%; overflow: hidden; transform: none !important; }
+  .body-orbit--outer { width: min(96vw, 420px); height: min(96vw, 420px); left: 50%; transform: translateX(-50%); }
+  .journey-orbit { max-width: 100%; overflow: hidden; }
+  .service-copy h3, .doctor-name { overflow-wrap: anywhere; }
+}
+@media (max-width: 520px) {
+  .hero-title { font-size: clamp(50px, 14.2vw, 68px); }
+  .care-card { max-width: 42vw; }
+}
